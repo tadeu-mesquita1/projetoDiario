@@ -1,3 +1,8 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
 body{
     display: flex;
     justify-content: center;
@@ -5,6 +10,10 @@ body{
     height: 100vh;
     margin: 0;
 }
-#titulo{
-    
+.titulo{
+    margin: 15px;
+}
+
+.btn{
+    margin-top: 15px;
 }
