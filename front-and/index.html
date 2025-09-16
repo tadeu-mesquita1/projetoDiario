@@ -7,23 +7,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 class="titulo">MeuDiário</h1>
-
-    <form action="/login" method="post" id="form">
-        <label for="nome">nome:</label>
-        <input type="text" id="nome" name="nome">
-        <br>
-        <label for="password">senha:</label>
-        <input type="password" id="password" name="password">
-
-        <br>
-
-        <button type="submit" class="btn">entrar</button>
-        <br>
-        <a href="cadastro.html">cadastre clicando aqui!!</a>
-        <br>
-        <a href="recuperar_senha.html">esqueci a senha.</a>
-    </form>
+    <div class="form">
+        <h1 class="titulo">MeuDiário</h1>
+        
+            <form action="/login" method="post" id="form">
+                <label for="nome">nome:</label>
+                <input type="text" id="nome" name="nome" class="input" placeholder="nome..">
+                <br>
+                <label for="password">senha:</label>
+                <input type="password" id="password" name="password" class = "input" placeholder="senha..">
+                <br>
+                <button type="submit" class="btn">entrar</button>
+                <br>
+                <a href="cadastro.html">cadastre clicando aqui!!</a>
+                <br>
+                <a href="recuperar_senha.html">esqueci a senha.</a>
+            </form>
+    </div>
 
     <script src="script.js"></script>
 </body>
