@@ -9,6 +9,7 @@ body{
     align-items: center;
     height: 100vh;
     margin: 0;
+    background-color: #cf9b2c;
 }
 .titulo{
     margin: 15px;
