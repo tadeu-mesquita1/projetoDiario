@@ -9,17 +9,23 @@
 </head>
 <body>
     <div class="form">
-        <h3 class="titulo">Recuperção de senha</h3>
-        <form action=""  method="post">
-            <label for="digiteNome">digite seu nome:</label>
-            <input type="text" id="digiteNome" name="digiteNome" placeholder="digite o nome" class ="input" >
-            <br>
-            <label for="NovaSenha">nova senha:</label>
-            <input type="password" id="NovaSenha" name="NovaSenha" placeholder="digite a nova senha" class ="input">
-            <br>
-            <button type="submit" class="btn">enviar</button>
-        </form>
-        <div id="recuperar_senha">nova senha ativada</div>
+        
+            <h3 class="titulo">Recuperção de senha</h3>
+            <div class="group">
+              <div class="group">
+                    <form action="/login" method="post" id="form">
+                        <label for="nome">nome:</label>
+                        <input type="text" id="nome" name="nome" class="input" placeholder="nome..">
+                        <br>
+                        <label for="novaSenha">senha:</label>
+                        <input type="password" id="password" name="password" class = "input" placeholder="novaSenha">
+                        <br>
+                        <button type="submit" class="btn">entrar</button>
+                       
+                    </form>
+            
+            </div>
+                  <div id="recuperar_senha">nova senha ativada</div>
     </div>
 
 </body>

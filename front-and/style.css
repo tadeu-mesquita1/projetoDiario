@@ -15,6 +15,8 @@ body{
 .form{
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
     background-color: #f3bf4f;
     width: 500px;
     border: solid black;
@@ -30,11 +32,12 @@ body{
 }
 
 #NovaSenha{
-    margin-left: 6px;
+    margin: 15px;
 }
 
 .titulo{
-   margin: 10px;
+   margin: 0px;
+   margin-left: 8px;
     padding: 25px;
 }
 
@@ -67,10 +70,13 @@ a:hover{
 }
 
 #recuperar_senha{
+    margin: 26px;
+   display: none;
     
 }
 
 #resultado{
-
-
+margin: 41px;
+display: none;
 }
+
