@@ -1,9 +1,14 @@
  const resultadoCadastro = document.getElementById("resultado") 
 
- const formulario = document.getElementById("formCadastro")
+ const formulario = document.querySelectorAll("form")
 
- formulario.addEventListener("submit",(evento)=>{
-    evento.preventDefault();
-    resultadoCadastro.style.display ="block"
+formulario.forEach((form)=>{
+   form.addEventListener("submit",Formularios)
 
- })
+})
+
+
+function Formularios(evento){
+   evento.preventDefault()
+ }
+ 
