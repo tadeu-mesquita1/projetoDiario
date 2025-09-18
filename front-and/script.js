@@ -13,4 +13,4 @@ function formularios(evento){
    const inputCadastroSenha = envioFormulario.querySelector("input[name = criasenha]")
    const inputRecupera = envioFormulario.querySelector("input[name = nomeRecup]")
    const inputRecuperaSenha = envioFormulario.querySelector("input[name = novaSenha]")
-}
+   }
