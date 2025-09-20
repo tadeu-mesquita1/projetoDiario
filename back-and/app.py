@@ -1,3 +1,7 @@
-from flask import Flask
+from flask import Flask, request
 
-app = flask(__name__)
+app = Flask(__name__)
+@app.route("/login", methods=['POST'])
+def login():
+
+    pass

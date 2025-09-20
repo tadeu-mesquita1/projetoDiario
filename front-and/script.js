@@ -6,6 +6,7 @@ formulario.forEach((form)=>{
 })
 
 function formularios(evento){
+   evento.preventDefault();
    const envioFormulario = evento.target
    
         if (envioFormulario.id === "formLogin") {
@@ -13,7 +14,11 @@ function formularios(evento){
             const inputLoginSenha = envioFormulario.querySelector("input[name=senha]").value;
   
              if (inputLogin !== "" && inputLoginSenha !== "") {
-              fetch()
+               const envioDadosLogin ={
+                  nome: inputLogin,
+                  senha:inputLoginSenha
+               }
+               fetch()
               .then(resposta =>{
 
                   return resposta.json()
@@ -25,12 +30,17 @@ function formularios(evento){
             } else {
                   window.alert("!!ERRO!! Digite nome e senha.")
              }
+
        } else if (envioFormulario.id === "formCadastro") {
          const inputCadastro = envioFormulario.querySelector("input[name = nomecadastro]").value
          const inputCadastroSenha = envioFormulario.querySelector("input[name = criasenha]").value
   
           if (inputCadastro !== "" && inputCadastroSenha !== "") {
-               fetch("http//127.0.0.1:5500/front-and/index.html")
+            const envioDadosCadastro ={
+               nome: inputCadastro,
+               senha:inputCadastroSenha
+            } 
+            fetch("")
               .then(resposta =>{
 
                   return resposta.json()
@@ -42,12 +52,17 @@ function formularios(evento){
          } else {
             window.alert("!!ERRO!! Digite nome e senha.")
           }
+
        } else if (envioFormulario.id === "FormRecup") {
           const inputRecupera = envioFormulario.querySelector("input[name = nomeRecup]").value
           const inputRecuperaSenha = envioFormulario.querySelector("input[name =novaSenha]" ).value
   
-         if (inputRecupera !== "" && inputRecuperaSenha !== "") {
-            fetch("http//127.0.0.1:5500/front-and/index.html")
+         if (inputRecupera !== "" && inputRecuperaSenha !== ""){
+            const envioDadosRecupera ={
+               nome: inputRecupera,
+               senha: inputRecuperaSenha
+            }
+            fetch()
               .then(resposta =>{
 
                   return resposta.json()
