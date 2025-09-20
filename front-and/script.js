@@ -13,7 +13,15 @@ function formularios(evento){
             const inputLoginSenha = envioFormulario.querySelector("input[name=senha]").value;
   
              if (inputLogin !== "" && inputLoginSenha !== "") {
-              // ...
+              fetch()
+              .then(resposta =>{
+
+                  return resposta.json()
+              })
+              .then(dados =>{
+
+               console.log(dados);
+              })
             } else {
                   window.alert("!!ERRO!! Digite nome e senha.")
              }
@@ -22,7 +30,15 @@ function formularios(evento){
          const inputCadastroSenha = envioFormulario.querySelector("input[name = criasenha]").value
   
           if (inputCadastro !== "" && inputCadastroSenha !== "") {
-         // ...
+               fetch("http//127.0.0.1:5500/front-and/index.html")
+              .then(resposta =>{
+
+                  return resposta.json()
+              })
+              .then(dados =>{
+
+               console.log(dados);
+              })
          } else {
             window.alert("!!ERRO!! Digite nome e senha.")
           }
@@ -31,9 +47,17 @@ function formularios(evento){
           const inputRecuperaSenha = envioFormulario.querySelector("input[name =novaSenha]" ).value
   
          if (inputRecupera !== "" && inputRecuperaSenha !== "") {
+            fetch("http//127.0.0.1:5500/front-and/index.html")
+              .then(resposta =>{
 
+                  return resposta.json()
+              })
+              .then(dados =>{
+
+               console.log(dados);
+              })
          } else {
-            window.alert("!!ERRO!! Digite nome e senha.")// ...
+            window.alert("!!ERRO!! Digite nome e senha.")
           }
        }
 }
