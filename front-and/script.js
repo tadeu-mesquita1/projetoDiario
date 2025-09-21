@@ -18,8 +18,17 @@ function formularios(evento){
                   nome: inputLogin,
                   senha:inputLoginSenha
                }
-               fetch()
+               fetch("http://127.0.0.1:5000/login", {
+                  method: "POST",
+                  headers:{
+                     "content-type":"application/json"
+                  },
+                  body: JSON.stringify(envioDadosLogin)
+               })
+               
+
               .then(resposta =>{
+
 
                   return resposta.json()
               })
@@ -46,8 +55,7 @@ function formularios(evento){
                   return resposta.json()
               })
               .then(dados =>{
-
-               console.log(dados);
+                  console.log(dados);
               })
          } else {
             window.alert("!!ERRO!! Digite nome e senha.")
