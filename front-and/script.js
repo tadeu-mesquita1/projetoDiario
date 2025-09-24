@@ -29,13 +29,19 @@ function formularios(evento){
 
               .then(resposta =>{
 
-
+                  console.log("Resposta bruta do servidor:", resposta);
                   return resposta.json()
               })
               .then(dados =>{
+               if(dados.mensagem == "Dados recebidos com sucesso!"){
+                  window.alert("login bem-sucedido")
+               } else{
+                  window.alert("nome de usuario ou senha incorretos.")
+               }
 
-               console.log(dados);
-              })
+              }
+              
+            )
             } else {
                   window.alert("!!ERRO!! Digite nome e senha.")
              }

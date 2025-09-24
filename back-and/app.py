@@ -9,4 +9,16 @@ def login():
 
     print(dados)
 
-    return jsonify({"mensagem": "Dados recebidos com sucesso!"})
+    usuario_validado = {
+        "nome": "nome",
+        "senha": "senha"
+    }
+    print("Dados recebidos:", dados["nome"], dados["senha"])
+    print("Dados de teste:", usuario_validado["nome"], usuario_validado["senha"])
+
+    if dados["nome"] == usuario_validado["nome"] and dados["senha"] == usuario_validado["senha"]:
+    # ... o que fazer se o login estiver correto
+        return jsonify({"mensagem": "Dados recebidos com sucesso!"})
+    else:
+    # ... o que fazer se o login estiver errado
+        return jsonify({"mensagem": "Nome de usuario ou senha incorretos"})
