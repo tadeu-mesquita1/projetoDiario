@@ -74,7 +74,11 @@ function formularios(evento){
               })
               .then(dados =>{
                   console.log(dados);
-              })
+              }
+            )
+            .catch(erroCadastro =>{
+               alert("ERRO NO SERVIDOR!")
+            })
          } else {
             window.alert("!!ERRO!! Digite nome e senha.")
           }
