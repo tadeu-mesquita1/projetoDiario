@@ -22,3 +22,8 @@ def login():
     else:
     # ... o que fazer se o login estiver errado
         return jsonify({"mensagem": "Nome de usuario ou senha incorretos"})
+    
+    
+@app.route("/cadastro", methods =["POST"])
+def cadastro():
+    dados_cadastro = request.get_json()

@@ -34,13 +34,18 @@ function formularios(evento){
               })
               .then(dados =>{
                if(dados.mensagem == "Dados recebidos com sucesso!"){
-                  window.alert("login bem-sucedido")
+                  window.location.href = "home.html"
                } else{
                   window.alert("nome de usuario ou senha incorretos.")
                }
 
               }
+
               
+            )
+            .catch(erro =>{
+               window.alert("ERRO DE CONEXÃO!!")
+            }
             )
             } else {
                   window.alert("!!ERRO!! Digite nome e senha.")
@@ -55,10 +60,17 @@ function formularios(evento){
                nome: inputCadastro,
                senha:inputCadastroSenha
             } 
-            fetch("")
-              .then(resposta =>{
-
-                  return resposta.json()
+            fetch("http://127.0.0.1:5000/cadastro",{
+               method: "POST",
+               headers:{
+                  "content-type":"application/json"
+               },
+               body: JSON.stringify(envioDadosCadastro)
+            })
+              .then(respostaCadastro =>{
+               console.log(respostaCadastro)
+                  return respostaCadastro.json()
+               
               })
               .then(dados =>{
                   console.log(dados);
