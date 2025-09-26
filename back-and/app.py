@@ -2,7 +2,10 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
+app.config["SQLALCHEMY_DATABASE_URI"]= 'sqlite:///site.db'
+db =SQLAlchemy(app)
 CORS(app)
+
 @app.route("/login", methods=['POST'])
 def login():
     dados = request.get_json()
