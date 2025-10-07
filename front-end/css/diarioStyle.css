@@ -8,13 +8,75 @@ body{
     display: flex;
     min-height: 100vh;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
-    background-color: #cf9b2c
+    background-color: #cf9b2c;
 
 }
-
+h1{
+    margin-top: 40px;
+}
 .emoçoes-conteiner{
     display: flex;
-    flex-direction: column;
+    margin-top: 31px;
     gap: 15px;
+}
+
+.btn{
+    background-color: transparent; /* Remove o fundo cinza padrão */
+    border: none;                  /* Remove a borda padrão do botão */
+    color: #333;                   /* Define a cor do ícone para ser visível */
+    cursor: pointer;                  /* Cursor de mão */
+    transition: all 0.3s ease; /* Adiciona uma transição suave de 0.3 segundos */
+    /* Regras de tamanho e forma */
+    width: 80px;                   /* Largura fixa */
+    height: 80px;                  /* Altura fixa */
+    border-radius: 50%;            /* Deixa o botão circular */
+    
+    /* Centraliza o ícone dentro do botão */
+    display: flex;                 
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover{
+     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4); /* Sombra preta, deslocada para baixo */
+}
+
+.emoçoes-conteiner i{
+    font-size: 80px;
+}
+
+#btnAlegria i{
+    color: #39a011;
+}
+
+#btnRaiva i{
+    color: #c71515;
+}
+
+#btnTristeza i{
+    color: rgb(52, 55, 212);
+}
+
+.formulario{
+    display:none ;
+}
+
+textarea{
+    width: 300px;
+    border-radius: 8px;
+    margin-top: 20px;
+
+     /* Novas Regras para Limpeza e Controle */
+    border: 1px solid #ccc; /* Dá uma borda clara e sutil */
+    outline: none;          /* Remove a borda azul feia que aparece no foco */
+    resize: none;           /* Impede o usuário de redimensionar a caixa */
+    padding: 10px;          /* Adiciona um preenchimento interno para o texto */
+}
+
+
+#btnSalvar{
+    width: 46px;
+    border-radius: 8px;
 }
